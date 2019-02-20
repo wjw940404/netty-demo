@@ -18,8 +18,9 @@ public class IOServer {
         new Thread(() -> {
             while (true) {
                 try {
-                    Socket socket = serverSocket.accept();
-                    new Thread(() -> {
+                    Socket socket = serverSocket.accept();  // 调用accept方法，这里会阻塞当前线程，等待socket连接，有新连接才会向下执行
+                    System.out.println("有新的socket连接");
+                    new Thread(() -> {  // 当有一个新的socket连接时，开启一个新线程
                         try {
                             byte[] data = new byte[1024];
                             InputStream inputStream = socket.getInputStream();
@@ -32,6 +33,7 @@ public class IOServer {
                         } catch (IOException e) {
                             e.printStackTrace();
                         }
+                        System.out.println("线程结束了.....");
                     }).start();
                 } catch (IOException e) {
                     e.printStackTrace();
