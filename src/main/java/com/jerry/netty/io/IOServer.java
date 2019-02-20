@@ -1,4 +1,4 @@
-package com.jerry.netty;
+package com.jerry.netty.io;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -25,7 +25,6 @@ public class IOServer {
                             InputStream inputStream = socket.getInputStream();
                             while (true) {
                                 int len;
-                                // (3) 按字节流方式读取数据
                                 while ((len = inputStream.read(data)) != -1) {
                                     System.out.println(new String(data, 0, len));
                                 }
