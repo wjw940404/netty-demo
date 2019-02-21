@@ -1,4 +1,4 @@
-package com.jerry.netty.io;
+package com.jerry.io;
 
 import java.net.Socket;
 import java.util.Date;

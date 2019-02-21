@@ -1,13 +1,13 @@
-package com.jerry.netty;
+package com.jerry;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class NettyApplication {
+public class Application {
 
 	public static void main(String[] args) {
-		SpringApplication.run(NettyApplication.class, args);
+		SpringApplication.run(Application.class, args);
 	}
 
 }
