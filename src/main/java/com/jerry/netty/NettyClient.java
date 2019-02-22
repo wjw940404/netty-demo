@@ -18,7 +18,7 @@ public class NettyClient {
 
     public static void main(String[] args) throws InterruptedException {
         Bootstrap bootstrap = new Bootstrap();
-        NioEventLoopGroup group = new NioEventLoopGroup();
+        NioEventLoopGroup group = new NioEventLoopGroup();  // group对应了我们IOClient.java中main函数起的线程
 
         bootstrap.group(group)
                 .channel(NioSocketChannel.class)
