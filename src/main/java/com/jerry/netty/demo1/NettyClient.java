@@ -1,4 +1,4 @@
-package com.jerry.netty;
+package com.jerry.netty.demo1;
 
 import io.netty.bootstrap.Bootstrap;
 import io.netty.channel.Channel;
